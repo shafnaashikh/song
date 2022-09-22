@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>music</title>
+         <meta charset="utf-8"/>
+        <style>
+            body{
+                background-image:url('headphone.jpg');
+                background-size: cover;
+                
+            }
+            br{
+                margin-left: 10cm;
+            }
+            h1{
+                margin-top: 8cm;
+                margin-left: 2.1cm;
+                font-size: 28px;
+                font-family: brush Script MT;
+                text-shadow: 1px 1px 2px white, 0 0 25px blue, 0 0 5px darkblue;
+            }
+    
+            img
+            {
+                margin-top: 0.6cm;
+                margin-left: 6cm;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>MUSIC Is The Language Of Spirit</h1>
+        <img src="playwhite-removebg-preview.png" width="50px" height="50px" id="icon">
+        <audio id="song">
+        <source src="kesariya.mp3" type="audio/mp3">
+        </audio>
+        <script>
+
+            var song=document.getElementById("song");
+            var icon=document.getElementById("icon");
+            icon.onclick=function()
+            {
+                if(song.paused)
+                {
+                    song.play();
+                    icon.src="pausewhite.png";
+                }
+                else
+                {
+                    song.pause();
+                    icon.src="playwhite-removebg-preview.png";
+                }
+            }
+
+        </script>
+      
+    </body>
+</html>
